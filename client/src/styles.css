@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Risque&display=swap');
+
+body {
+  font-family: 'Risque', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* #grid {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+} */
