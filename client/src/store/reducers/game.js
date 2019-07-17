@@ -10,8 +10,9 @@ import {
 } from '../constants';
 
 const initialState = {
-  grid: Array(25 * 25).fill(false),
   clickable: true,
+  generation: 0,
+  grid: Array(25 * 25).fill(false),
   running: false,
   speed: 0
 };
@@ -32,13 +33,14 @@ export const gameReducer = produce((draft, action) => {
       draft.speed--;
       return;
     case GAME_RESET:
-      draft = initialState;
-      return;
+        draft.clickable = true;
+        draft.generation = 0;
+        draft.grid = Array(25 * 25).fill(false);
+        draft.running = false;
+        draft.speed = 0;
+        return;
     case TOGGLE_CELL:
-      draft.grid = Array(25 * 25).fill(false);
-      draft.clickable = true;
-      draft.running = false;
-      draft.speed = 0;
+      draft.grid[action.payload] = !draft.grid[action.payload];
       return;
     default:
       return;
