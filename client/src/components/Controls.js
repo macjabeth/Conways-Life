@@ -1,29 +1,27 @@
 import React from 'react';
-import { useStateValue } from 'react-conflux';
-import { gameContext } from '../store/contexts';
 
-import {
-  GAME_START,
-  GAME_STOP,
-  GAME_FASTER,
-  GAME_SLOWER,
-  GAME_RESET
-} from '../store/constants';
-
-const Controls = () => {
-  const [state, dispatch] = useStateValue(gameContext);
-  const { generation, speed } = state;
-  return (
-    <div className="controls">
-      <h3>Controls</h3>
-      <button onClick={() => dispatch({ type: GAME_START })}>start</button>
-      <button onClick={() => dispatch({ type: GAME_STOP })}>stop</button>
-      <button onClick={() => dispatch({ type: GAME_FASTER })}>faster</button>
-      <button onClick={() => dispatch({ type: GAME_SLOWER })}>slower</button>
-      <button onClick={() => dispatch({ type: GAME_RESET })}>reset</button>
-      <span>Generation: {generation}<br />Speed: {speed}ms</span>
-    </div>
-  );
-};
+const Controls = ({
+  generation,
+  speed,
+  start,
+  stop,
+  faster,
+  slower,
+  reset
+}) => (
+  <div className="controls">
+    <h3>Controls</h3>
+    <button onClick={start}>start</button>
+    <button onClick={stop}>stop</button>
+    <button onClick={faster}>faster</button>
+    <button onClick={slower}>slower</button>
+    <button onClick={reset}>reset</button>
+    <span>
+      Generation: {generation}
+      <br />
+      Speed: {speed}ms
+    </span>
+  </div>
+);
 
 export default Controls;
