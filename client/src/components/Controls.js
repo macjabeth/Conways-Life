@@ -12,7 +12,7 @@ import {
 
 const Controls = () => {
   const [state, dispatch] = useStateValue(gameContext);
-  const { generation } = state;
+  const { generation, speed } = state;
   return (
     <div className="controls">
       <h3>Controls</h3>
@@ -21,7 +21,7 @@ const Controls = () => {
       <button onClick={() => dispatch({ type: GAME_FASTER })}>faster</button>
       <button onClick={() => dispatch({ type: GAME_SLOWER })}>slower</button>
       <button onClick={() => dispatch({ type: GAME_RESET })}>reset</button>
-      <span>Generation: {generation}</span>
+      <span>Generation: {generation}<br />Speed: {speed}ms</span>
     </div>
   );
 };

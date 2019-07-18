@@ -5,3 +5,4 @@ export const GAME_SLOWER = 'GAME_SLOWER';
 export const GAME_RESET = 'GAME_RESET';
 
 export const TOGGLE_CELL = 'TOGGLE_CELL'
+export const APPLY_LIFECYCLE = 'APPLY_LIFECYCLE';
