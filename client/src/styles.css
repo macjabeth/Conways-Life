@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Risque&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #342626;
+  font-family: 'Risque', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100vh;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(196, 196, 196, 0.5);
+  border-radius: 6.25px;
+  display: grid;
+  grid-template-columns: repeat(25, 1fr);
+  grid-template-rows: repeat(25, 1fr);
+  grid-auto-flow: row;
+  grid-gap: 1px;
+}
+
+.alive {
+  background-color: black;
+}
+
+.dead {
+  background-color: white;
+}
+
+.controls {
+  width: 250px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(194, 142, 142, 0.5);
+  border-radius: 6.25px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.controls > h3 {
+  margin: 15px 0;
+  font-size: 3.6rem;
+  text-decoration: underline;
+  font-variant: small-caps;
+  color: #a7bf15;
+}
+
+.controls > button {
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  border: none;
+  display: block;
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  font-variant: small-caps;
+  color: #e5e5e5;
+  text-shadow: 2px 2px #ff0000;
+}
+
+.controls > button:hover {
+  text-decoration: underline;
+}
+
+.controls > span {
+  font-size: 1.4rem;
+  position: absolute;
+  bottom: 15px;
+}
