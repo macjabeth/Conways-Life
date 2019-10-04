@@ -7,7 +7,8 @@ const Controls = ({
   stop,
   faster,
   slower,
-  reset
+  reset,
+  random
 }) => (
   <div className="controls">
     <h3>Controls</h3>
@@ -16,6 +17,7 @@ const Controls = ({
     <button onClick={faster}>faster</button>
     <button onClick={slower}>slower</button>
     <button onClick={reset}>reset</button>
+    <button onClick={random}>random</button>
     <span>
       Generation: {generation}
       <br />

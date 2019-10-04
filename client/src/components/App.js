@@ -53,6 +53,13 @@ const App = () => {
     setState(initialState);
   };
 
+  const random = () => {
+    setState({
+      ...state,
+      grid: state.grid.map(cell => Math.random() > 0.5)
+    });
+  };
+
   const toggleCell = idx => {
     if (!state.clickable) return;
     const grid = state.grid;
