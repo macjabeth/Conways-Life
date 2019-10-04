@@ -6,9 +6,9 @@ import Controls from './Controls';
 const initialState = {
   clickable: true,
   generation: 0,
-  grid: Array(25 * 25).fill(false),
+  grid: Array(50 * 50).fill(false),
   running: false,
-  speed: 250
+  speed: 150
 };
 
 const App = () => {
@@ -82,6 +82,7 @@ const App = () => {
         faster={faster}
         slower={slower}
         reset={reset}
+        random={random}
       />
     </Fragment>
   );
