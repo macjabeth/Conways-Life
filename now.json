@@ -1,0 +1,11 @@
+{
+  "name": "conways-life",
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@now/static-build",
+      "config": { "distDir": "build" }
+    }
+  ],
+  "routes": [{ "src": "/(.*)", "dest": "client/$1" }]
+}
